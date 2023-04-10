@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelo.Episodio;
 import br.com.alura.screenmatch.modelo.Filme;
 import br.com.alura.screenmatch.modelo.Serie;
 
+import java.util.ArrayList;
+
 public class Principal { // classe principal
     public static void main(String[] args) {
         // Referência ao objeto br.com.alura.screenmatch.modelo.Filme.
@@ -30,13 +32,13 @@ public class Principal { // classe principal
                 --------------------------
                 """);
 
-        Serie lucifer = new Serie();
+        Serie lucifer = new Serie();    // instanciando um novo objeto do tipo Serie
         lucifer.setNome("Lucifer");
         lucifer.setAnoDeLancamento(2016);
         lucifer.setTemporadas(5);
         lucifer.setNumeroDeEpisodios(10);
         lucifer.setMinutosPorEpisodio(45);
-        lucifer.exibeFichaTecnica();
+        lucifer.exibeFichaTecnica();   // exibindo a ficha técnica da série
 
         System.out.println("A duração total da série é: " + lucifer.getDuracaoEmMinutos() + " minutos");
 
@@ -45,11 +47,11 @@ public class Principal { // classe principal
                 --------------------------
                 """);
 
-        Filme outroFilme = new Filme();
+        Filme outroFilme = new Filme(); // instanciando um novo objeto do tipo Filme
         outroFilme.setNome("Avatar o último mestre do ar");
         outroFilme.setAnoDeLancamento(2009);
         outroFilme.setDuracaoEmMinutos(162);
-        outroFilme.exibeFichaTecnica();
+        outroFilme.exibeFichaTecnica(); // exibindo a ficha técnica do filme
         System.out.println(
                 """
                         
@@ -65,12 +67,36 @@ public class Principal { // classe principal
         System.out.println("O tempo total de filmes e Series é: " + calculadora.getTempoTotal() + " minutos");
 
 
-        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        FiltroRecomendacao filtro = new FiltroRecomendacao(); // instanciando o filtro
         filtro.filtra(meuFilme);
-        Episodio episodio = new Episodio();
+        Episodio episodio = new Episodio(); // instanciando um episódio
         episodio.setNumero(1);
         episodio.setSerie(lucifer);
-        episodio.setTotalVisualizacoes(500);
+        episodio.setTotalVisualizacoes(500); // setando o total de visualizações do episódio
         filtro.filtra(episodio);
+
+        Filme filmeDoKelvyn = new Filme();
+        filmeDoKelvyn.setNome("John Wick 4"); // setando o nome do filme
+        filmeDoKelvyn.setAnoDeLancamento(2023); // setando o ano de lançamento do filme
+        filmeDoKelvyn.setDuracaoEmMinutos(120); // setando a duração do filme
+        filmeDoKelvyn.avalia(9); // avaliando o filme
+        System.out.println("""
+                
+                --------------------------
+                """);
+
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();    // criação de um ArrayList de filmes
+        listaDeFilmes.add(meuFilme);                    // adicionando o filme meuFilme ao ArrayList
+        listaDeFilmes.add(outroFilme);                  // adicionando o filme outroFilme ao ArrayList
+        listaDeFilmes.add(filmeDoKelvyn);               // adicionando o filme filmeDoKelvyn ao ArrayList
+        System.out.println("A lista de filmes tem " + listaDeFilmes.size() + " filmes"); // exibindo o tamanho do ArrayList
+        System.out.println("O primeiro filme da lista é: " + listaDeFilmes.get(0).toString()); // exibindo o primeiro filme da lista
+        System.out.println(listaDeFilmes); // exibindo a lista de filmes
+        System.out.println("""
+                
+                --------------------------
+                """);
+
     }
 }
