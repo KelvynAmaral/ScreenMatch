@@ -6,6 +6,11 @@ public class Filme extends Titulo implements Classificavel { //classe filha - su
 
     private String diretor;
 
+    public Filme(String nome, int anoDeLancamento) { //construtor da subclasse chamando o construtor da superclasse
+        super(nome, anoDeLancamento);
+    }
+
+
     public String getDiretor() {
         return diretor;
     }

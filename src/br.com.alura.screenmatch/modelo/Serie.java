@@ -9,6 +9,10 @@ public class Serie extends Titulo implements Classificavel { //classe filha - su
     private boolean ativa;
     private int minutosPorEpisodio;
 
+    public Serie(String nome, int anoDeLancamento) { //construtor da subclasse chamando o construtor da superclasse
+        super(nome, anoDeLancamento);
+    }
+
     public int getTemporadas() {
         return temporadas;
     }
@@ -44,9 +48,8 @@ public class Serie extends Titulo implements Classificavel { //classe filha - su
     // sobrescrita do metodo duracaoEmMinutos
 
     @Override //@Override anotação do java para sobrescrever o método.
-    public int getDuracaoEmMinutos() {
-        return temporadas * numeroDeEpisodios * minutosPorEpisodio; // retorna a duração em minutos da série
-    }
+    public int getDuracaoEmMinutos() {  return temporadas * numeroDeEpisodios * minutosPorEpisodio;  }
+    // retorna a duração em minutos da série
 
     @Override
     public int getClassificacao() {
@@ -55,7 +58,7 @@ public class Serie extends Titulo implements Classificavel { //classe filha - su
 
     @Override
     public String toString() {
-        return "Série: " + this.getNome() + " - " + this.getAnoDeLancamento() + " - " + this.getTemporadas() + " minutos";
+        return "Série: " + this.getNome() + " - " + this.getAnoDeLancamento();
     }
 }
 

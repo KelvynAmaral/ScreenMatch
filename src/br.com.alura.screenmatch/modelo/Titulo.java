@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.modelo;
 
-public class Titulo { //classe mãe - superclasse
+public class Titulo implements Comparable <Titulo> { //classe mãe - superclasse
 
     // classe br.com.alura.screenmatch.modelo.Filme
 
@@ -11,6 +11,10 @@ public class Titulo { //classe mãe - superclasse
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
+    public Titulo(String nome, int anoDeLancamento) { //construtor da Super classe
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
 
     // Definindo getters e setters para os atributos
     public String getNome() {
@@ -69,4 +73,8 @@ public class Titulo { //classe mãe - superclasse
             return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
 }
