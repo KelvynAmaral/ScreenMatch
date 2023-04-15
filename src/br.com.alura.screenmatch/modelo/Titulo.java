@@ -1,19 +1,33 @@
 package br.com.alura.screenmatch.modelo;
+import br.com.alura.screenmatch.excecao.ErroDeConversaoDeAnoException;
 
 public class Titulo implements Comparable <Titulo> { //classe mãe - superclasse
-
     // classe br.com.alura.screenmatch.modelo.Filme
 
     private String nome;
+
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
+
     private int duracaoEmMinutos;
 
     public Titulo(String nome, int anoDeLancamento) { //construtor da Super classe
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public Titulo(TituloOmdb meuTituloOmdb) { //construtor da Super classe
+        this.nome = meuTituloOmdb.Title();
+
+        if (meuTituloOmdb.year().length() > 4) {
+            throw new ErroDeConversaoDeAnoException("nao consegui converter o erro" +
+                    "porque tem mais de 04 caracteres ");
+        }
+        this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
+        this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.Runtime().substring(0, 3));
+
     }
 
     // Definindo getters e setters para os atributos
@@ -76,5 +90,15 @@ public class Titulo implements Comparable <Titulo> { //classe mãe - superclasse
     @Override
     public int compareTo(Titulo outroTitulo) {
         return this.getNome().compareTo(outroTitulo.getNome());
+    }
+
+    @Override
+    public String toString() {
+        return "Titulo{" +
+                "nome='" + nome + '\'' +
+                ", Lancamento= " + anoDeLancamento +
+                ", Duracao= " + duracaoEmMinutos;
+
+
     }
 }
