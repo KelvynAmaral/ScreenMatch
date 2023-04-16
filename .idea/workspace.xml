@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb4d21cc-58bd-400f-ac37-4d098b5b025e" name="Changes" comment="ADDList">
+    <list default="true" id="bb4d21cc-58bd-400f-ac37-4d098b5b025e" name="Changes" comment="Tratando exceções">
       <change afterPath="$PROJECT_DIR$/.idea/ChatGPTCopilotChannelManager.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br.com.alura.screenmatch/modelo/TituloOmdb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br.com.alura.screenmatch/principal/PrincipalComBusca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/screenmatch/excecao/ErroDeConversaoDeAnoException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenMatch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenMatch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br.com.alura.screenmatch/calculos/Classificavel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br.com.alura.screenmatch/calculos/Classificavel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br.com.alura.screenmatch/modelo/Titulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br.com.alura.screenmatch/modelo/Titulo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br.com.alura.screenmatch/principal/PrincipalComBusca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br.com.alura.screenmatch/principal/PrincipalComBusca.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,12 +114,31 @@
       <option name="project" value="LOCAL" />
       <updated>1681330001883</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Tratando exceções">
+      <created>1681575607869</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681575607869</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ProjetoStreamer" />
     <MESSAGE value="ADDList" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADDList" />
+    <MESSAGE value="Tratando exceções" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tratando exceções" />
   </component>
 </project>
